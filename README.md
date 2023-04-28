@@ -5,3 +5,7 @@ Funzioni pagina:
   -Pagina prodotti dinamica PHP
   -Record su Database + record locali in local storage
   
+  
+  -aggiunta punti gioco
+  -livelli con aumento velocità incrementale
+  
