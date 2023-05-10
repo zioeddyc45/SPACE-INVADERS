@@ -45,7 +45,7 @@ class Player{
         c.rotate(this.rotation)
 
         c.translate(
-            -player.position.x - player.width/2
+            -player.position.x - player.width/2,
             -player.position.y - player.height/2
         )
         
@@ -458,8 +458,10 @@ function animate(){
 
     frames++
 }
+$( document ).ready(
+    animate()
+);
 
-animate()
 
 addEventListener('keydown', ({key}) => {
     if (game.over) return  
