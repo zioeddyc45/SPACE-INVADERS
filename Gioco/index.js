@@ -29,6 +29,7 @@ class Player{
                 x: canvas.width/2 - this.width/2,
                 y: canvas.height - this.height - 20
             }
+            console.log(this);
         }
     }
 
@@ -143,6 +144,7 @@ class InvaderProjectile{
 
 class Invader{
     constructor({position}){
+        this.position = position;
         this.velocity={
             x: 0,
             y: 0
@@ -182,6 +184,7 @@ class Invader{
     }
 
     shoot(invaderProjectiles){
+
         invaderProjectiles.push(
             new InvaderProjectile({
                 position: {
@@ -376,7 +379,7 @@ function animate(){
         grid.update()
 
         if (frames%100===0 && grid.invaders.length>0){
-            grid.invaders[Math.floor(Math.random()*grid.invaders.length)].shoot(invaderProjectiles)
+            grid.invaders[Math.floor(Math.random()*grid.invaders.length)].shoot(invaderProjectiles);
         }
 
         grid.invaders.forEach((invader, i) => {
