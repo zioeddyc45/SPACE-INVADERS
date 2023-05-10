@@ -326,7 +326,7 @@ function animate(){
 
         if (particle.opacity <= 0){
             setTimeout(() => {
-                invaderProjectiles.splice(index, 1)
+                invaderProjectiles.splice(i, 1)
             }, 0)
         } else {
             particle.update()
@@ -462,7 +462,7 @@ $( document ).ready(
     animate()
 );
 
-
+var delay = false;
 addEventListener('keydown', ({key}) => {
     if (game.over) return  
 
@@ -476,6 +476,11 @@ addEventListener('keydown', ({key}) => {
             keys.d.pressed=true
             break
         case ' ':
+            if (delay)
+            return;
+
+            delay = true;
+            setTimeout(function () { delay = false; }, 100);
             //console.log('space')
             projectiles.push(
                 new Projectile({
