@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.header{
+    background-image: url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+}
+
+.home{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+}
+
+.logo{
+    margin-left: 70px;
+    width: 150px;
+}
+
+.link li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.link a{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color: yellow;
+    font-size: 27px;
+    margin-left: 100px;
+}
+
+/*footer*/
+.container{
+    height: 120px;
+    max-width: 1570px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.logosotto{
+    width: 100px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+
+
+
+
