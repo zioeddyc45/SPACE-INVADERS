@@ -462,6 +462,8 @@ $( document ).ready(
     animate()
 );
 
+//controllo giocatore con tasti5
+
 var delay = false;
 addEventListener('keydown', ({key}) => {
     if (game.over) return  
@@ -476,6 +478,7 @@ addEventListener('keydown', ({key}) => {
             keys.d.pressed=true
             break
         case ' ':
+            //delay per dare ritmo naturale ai proiettili
             if (delay)
             return;
 
