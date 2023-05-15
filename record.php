@@ -7,11 +7,12 @@
     <title>Records - Space invaders</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="/components/play.css" />
+    <link rel="stylesheet" href="/components/main.css" />
+    <link rel="stylesheet" href="/components/record.css" />
     
 </head>
   <body>
-
+<div class="space"></div>
     <nav class="navbar navbar-expand-lg bg-dark" >
         <div class="container-fluid ">
           <a class="anchor" name="top" style="top: 0px;"></a>
@@ -33,29 +34,41 @@
       <a name="game_panel" class="anchor"></a>
       <div class="container-fluid row" style="height: 100%;">
       <div class="col-2" style="height: 100%;"></div>
-      <div class="col-8" style="background-color: rgb(54, 122, 47);">
+      <div class="col-8" style="xbackground-color: rgb(54, 122, 47);">
         <div class="align-self-center" style="height: 90%">
 
           <?php
           $dbconn = pg_connect("host=localhost port=5432 dbname=Space  user=edvige password=edvige")
             or die(' Could not connect: ' . pg_lasterror());
-          $query = 'SELECT name, points FROM records ';
+          $query = 'SELECT name, points FROM records ORDER BY "points" desc ';
           pg_send_query($dbconn, $query) or die(' Query failed: ' . pg_lasterror());
           $result = pg_get_result($dbconn);
           // P r i n t i n g r e s u l t s i n HTML
-          echo "<table>\n ";
+          echo "<table class='table table-dark table-striped'>\n<thead>
+          <tr>
+            <th scope='col'>#</th>
+            <th scope='col'>USER</th>
+            <th scope='col'>Points</th>
+          </tr>
+        </thead>
+        <tbody> ";
+          $position = 0;
           while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-            echo "\t<tr>\n";
+            echo "\t<tr>\n"; 
+          
+            $position++;
+            echo "<th scope='row'>$position</th>";
             foreach ($line as $colvalue) {
+             
               echo "\t\t<td>$colvalue </td>";
             }
             echo "\t</tr>\n ";
           }
-          echo "</table>\n";
+          echo "</tbody></table>\n";
           pg_free_result($result);
           pg_close($dbconn);
           ?>
-          
+
         </div>
       </div>
       <div class="col-2" style="height: 100%;"></div>

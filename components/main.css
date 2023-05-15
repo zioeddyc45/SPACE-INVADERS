@@ -12,3 +12,109 @@ a{
     position: absolute;
     left: 0px;
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.header{
+    background-image: url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+}
+
+.home{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    /*position: absolute;*/
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+}
+.nav-link:hover{
+    color: #ffffff;
+}
+.dropdown-menu{
+    background-color:#212529;
+}
+
+.logo{
+    margin-left: 70px;
+    width: 150px;
+}
+
+.link li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.link a{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color: yellow !important;
+    font-size: 27px;
+    margin-left: 100px;
+}
+
+/*footer*/
+.container{
+    height: 120px;
+    max-width: 1570px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #24262b;
+    padding: 70px 0;
+}
+
+.logosotto{
+    width: 100px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+body{
+    background-color: #000;
+}
+
+.space{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -37vw -32vh 0px 0px #fff,18vw -3vh 1px 1px #fff,15vw -16vh 0px 1px #fff,-14vw 21vh 0px 0px #fff,35vw 41vh 0px 0px #fff,47vw 47vh 3px 3px #fff,-41vw 36vh 2px 0px #fff,-1vw -17vh 3px 1px #fff,-9vw -46vh 2px 2px #fff,13vw -42vh 1px 0px #fff,-43vw 36vh 2px 3px #fff,28vw 34vh 2px 0px #fff,3vw 16vh 1px 1px #fff,20vw -20vh 0px 2px #fff,-32vw -1vh 1px 1px #fff,-30vw -49vh 1px 3px #fff,-43vw 21vh 0px 2px #fff,-48vw 23vh 2px 2px #fff,-9vw 49vh 2px 3px #fff,-43vw 42vh 2px 0px #fff,23vw -14vh 1px 3px #fff,26vw 2vh 1px 1px #fff,-49vw -35vh 0px 2px #fff,-17vw -31vh 3px 2px #fff,41vw 46vh 0px 2px #fff,-43vw -6vh 2px 3px #fff,19vw -5vh 3px 3px #fff,48vw 43vh 0px 3px #fff,-26vw 33vh 0px 0px #fff,-27vw 48vh 3px 1px #fff,6vw 38vh 3px 1px #fff,0vw 43vh 0px 3px #fff,-13vw 21vh 2px 2px #fff,38vw 28vh 0px 0px #fff,-37vw -13vh 2px 2px #fff,0vw -8vh 0px 0px #fff,42vw -46vh 3px 1px #fff,32vw -16vh 1px 3px #fff,-9vw 49vh 1px 0px #fff,-40vw -49vh 2px 0px #fff,15vw -19vh 2px 1px #fff,-4vw 33vh 0px 2px #fff,-10vw 43vh 3px 0px #fff,-18vw 15vh 3px 3px #fff,-15vw 20vh 0px 3px #fff,14vw 43vh 2px 1px #fff,22vw -6vh 3px 0px #fff,32vw -48vh 2px 1px #fff,-12vw 41vh 1px 2px #fff,-40vw -38vh 3px 0px #fff,-40vw 9vh 1px 0px #fff,16vw 32vh 2px 0px #fff,-16vw -14vh 2px 0px #fff,-11vw -26vh 2px 3px #fff,40vw 36vh 0px 2px #fff,17vw 10vh 2px 2px #fff,-11vw -44vh 2px 2px #fff,-44vw 2vh 1px 1px #fff,-3vw -32vh 1px 3px #fff,31vw 39vh 0px 1px #fff,1vw 31vh 0px 0px #fff,-4vw 40vh 1px 1px #fff,2vw -8vh 3px 1px #fff,0vw 48vh 3px 3px #fff,11vw 3vh 2px 2px #fff,30vw -3vh 1px 2px #fff,-50vw 4vh 0px 1px #fff,23vw 25vh 2px 2px #fff,26vw 8vh 1px 2px #fff,-34vw 15vh 1px 2px #fff,-49vw -4vh 2px 0px #fff,10vw -18vh 3px 2px #fff,21vw 38vh 3px 3px #fff,47vw 15vh 0px 2px #fff,32vw -43vh 0px 3px #fff,-39vw 16vh 2px 3px #fff,-40vw -33vh 3px 3px #fff,-2vw 27vh 1px 0px #fff,-34vw -6vh 2px 3px #fff,-15vw -40vh 3px 2px #fff,-21vw 4vh 0px 1px #fff,-2vw -1vh 1px 0px #fff,50vw 27vh 3px 0px #fff,-15vw 32vh 0px 2px #fff,10vw 26vh 2px 2px #fff,-14vw 11vh 0px 3px #fff,16vw -5vh 1px 3px #fff,24vw 33vh 2px 3px #fff,41vw 2vh 2px 3px #fff,16vw -44vh 0px 3px #fff,5vw 5vh 0px 0px #fff,24vw -34vh 1px 1px #fff,41vw -9vh 0px 1px #fff,-3vw 43vh 0px 0px #fff,-45vw -3vh 0px 2px #fff,16vw -14vh 3px 3px #fff,41vw 37vh 1px 0px #fff,22vw 21vh 2px 2px #fff,-4vw -32vh 1px 2px #fff,45vw -40vh 3px 2px #fff;
+    z-index: -999;
+}
+
+
+
+
+
+
