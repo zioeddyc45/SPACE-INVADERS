@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav">
                 <li class="nav-item link"> <a class="nav-link " href="play.html">PLAY</a> </li>
-                <li class="nav-item link"> <a class="nav-link " href="record.html">RECOIORD</a> </li>
+                <li class="nav-item link"> <a class="nav-link " href="record.html">RECOORD</a> </li>
                 <li class="nav-item link"> <a class="nav-link" href="products.html">PRODUCTS</a></li>
                 <li class="nav-item link"> <a class="nav-link " href="news.html">NEWS</a> </li>
                 <li class="nav-item link"> <a class="nav-link " href="about.html">ABOUT</a> </li>
@@ -34,7 +34,7 @@
       <a name="game_panel" class="anchor"></a>
       <div class="container-fluid row" style="height: 100%;">
       <div class="col-2" style="height: 100%;"></div>
-      <div class="col-8" style="xbackground-color: rgb(54, 122, 47);">
+      <div class="col-8">
         <div class="align-self-center" style="height: 90%">
 
           <?php
