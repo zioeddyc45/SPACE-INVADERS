@@ -19,11 +19,11 @@
         <div class="form-group">
           <p class="h1" style="color:white;">You scored :</p>
           <p class="h1" style="color:white;" for="points" id="usrPoints">ERROR</p>
-          <input type="hidden" class="form-control" id="gamePoints" name="gamePoints" aria-describedby="points">
+          <input type="hidden" class="form-control" id="points" name="points" aria-describedby="points">
         </div>
         <div class="form-group">
           <label class="h4" style="color:white;" for="user">Insert username</label>
-          <input type="text" class="form-control" id="userName" name="userName" placeholder="AAA">
+          <input type="text" class="form-control" id="name" name="name" placeholder="AAA">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -35,7 +35,7 @@
     <script>
       $(document).ready(function () {
         var pt = get("Points");
-        $("#gamePoints").attr("value", pt);
+        $("#points").attr("value", pt);
         $("#usrPoints").html (pt+"pts");
       });
     </script>

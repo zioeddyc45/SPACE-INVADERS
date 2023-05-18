@@ -3,12 +3,12 @@
 $errors = [];
 $data = [];
 
-if (empty($_POST['userName'])) {
-    $errors['userName'] = 'Name is required.';
+if (empty($_POST['name'])) {
+    $errors['name'] = 'Name is required.';
 }
 
-if (empty($_POST['gamePoints'])) {
-    $errors['gamePoints'] = 'Bruh';
+if (empty($_POST['points'])) {
+    $errors['points'] = 'Bruh';
 }
 if (!empty($errors)) {
 
@@ -18,14 +18,19 @@ if (!empty($errors)) {
     $data['errors'] = $errors;
 } else {
     
-    $points = $_POST['gamePoints'];
-    $user = $_POST['userName'];
-
-    echo $user;
+    $points = $_POST['points'];
+    $user = $_POST['name'];
+    $q = array("points"=>$points,"name"=>$user);
+   
 
     $dbconn = pg_connect("host=localhost port=5432 dbname=Space  user=edvige password=edvige") or die(' Could not connect: ' . pg_lasterror());
-    $query = 'INSERT INTO records (create_time,points,name) VALUES (current_timestamp, $points ,$user );';
-    pg_send_query($dbconn, $query) or die(' Query failed: ' . pg_lasterror());
+    $res = pg_insert($dbconn,"records", $q);
+    if($res){
+        $data['query'] = 'done';
+    }
+    else{
+        $data['query'] = 'Q error';
+    }
     pg_close($dbconn);
 
     $data['success'] = true;

@@ -6,7 +6,7 @@ function post(path, points, method='get') {
   
 
         const hiddenField = document.createElement('input');
-        hiddenField.type = 'hidden';
+        hiddenField.type = 'number';
         hiddenField.name = "Points";
         hiddenField.value = points;
   
@@ -14,4 +14,5 @@ function post(path, points, method='get') {
   
     document.body.appendChild(form);
     form.submit();
+    form.remove();
   }
