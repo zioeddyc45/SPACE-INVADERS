@@ -16,14 +16,14 @@
 
     <div class="container-flex text-center">
       <form action="form.php" method="POST">
-        <div class="form-group">
+        <div class="form-group" id="points-group">
           <p class="h1" style="color:white;">You scored :</p>
           <p class="h1" style="color:white;" for="points" id="usrPoints">ERROR</p>
           <input type="hidden" class="form-control" id="points" name="points" aria-describedby="points">
         </div>
-        <div class="form-group">
+        <div class="form-group" id="name-group">
           <label class="h4" style="color:white;" for="user">Insert username</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="AAA">
+          <input type="text" class="form-control" maxlength="3" id="name" name="name" placeholder="AAA">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
@@ -39,5 +39,6 @@
         $("#usrPoints").html (pt+"pts");
       });
     </script>
+    <script src="components/form.js"></script>
   </body>
 </html>
