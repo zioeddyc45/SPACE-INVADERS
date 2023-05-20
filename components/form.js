@@ -40,7 +40,7 @@ $(document).ready(function () {
     })
     .fail(function (data) {
         $("form").html(
-          '<div class="alert alert-danger">Could not reach server, please try again later.</div>'
+          '<div class="alert alert-danger">Connessione al server fallita. Riprovare più tardi.</div>'
         );
       });
 

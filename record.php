@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
               <ul class="navbar-nav">
                 <li class="nav-item link"> <a class="nav-link " href="play.html">PLAY</a> </li>
-                <li class="nav-item link"> <a class="nav-link " href="record.html">RECOORD</a> </li>
+                <li class="nav-item link"> <a class="nav-link " href="record.PHP">RECORD</a> </li>
                 <li class="nav-item link"> <a class="nav-link" href="products.html">PRODUCTS</a></li>
                 <li class="nav-item link"> <a class="nav-link " href="news.html">NEWS</a> </li>
                 <li class="nav-item link"> <a class="nav-link " href="about.html">ABOUT</a> </li>
@@ -57,11 +57,21 @@
             echo "\t<tr>\n"; 
           
             $position++;
-            echo "<th scope='row'>$position</th>";
-            foreach ($line as $colvalue) {
-             
-              echo "\t\t<td>$colvalue </td>";
+            if($position <= 3){
+              echo "<th class='h$position' scope='row'>$position</th>";
+              foreach ($line as $colvalue) {
+               
+                echo "\t\t<td class='h$position'>$colvalue </td>";
+              }
             }
+            else{
+              echo "<th scope='row'>$position</th>";
+              foreach ($line as $colvalue) {
+             
+                echo "\t\t<td>$colvalue </td>";
+              }
+            }
+            
             echo "\t</tr>\n ";
           }
           echo "</tbody></table>\n";

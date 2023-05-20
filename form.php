@@ -26,7 +26,7 @@ if (!empty($errors)) {
     $dbconn = pg_connect("host=localhost port=5432 dbname=Space  user=edvige password=edvige") or die(' Could not connect: ' . pg_lasterror());
     $res = pg_insert($dbconn,"records", $q);
     if($res){
-        $data['query'] = 'done';
+        $data['query'] = 'Done';
     }
     else{
         $data['query'] = 'Q error';
@@ -36,5 +36,3 @@ if (!empty($errors)) {
     $data['success'] = true;
     $data['message'] = 'Success!';
 }
-
-echo json_encode($data);
