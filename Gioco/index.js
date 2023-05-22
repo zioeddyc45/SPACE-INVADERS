@@ -354,7 +354,8 @@ function animate(){
             }, 0)
 
             setTimeout(() => {
-                game.active=false
+                game.active=false;
+                post("form.html", score);
             }, 2000)
 
             createParticles({
@@ -384,6 +385,29 @@ function animate(){
 
         grid.invaders.forEach((invader, i) => {
             invader.update({velocity: grid.velocity})
+
+            if (
+                invader.position.y+invader.height>=player.position.y && invader.position.x+invader.width>=player.position.x && invader.position.x <= player.position.x+player.width
+            ) {
+                console.log('you lose')
+                
+                setTimeout(() => {
+                    invaderProjectiles.splice(index, 1)
+                    player.opacity=0
+                    game.over=true
+                }, 0)
+    
+                setTimeout(() => {
+                    game.active=false;
+                    post("form.html", score);
+                }, 2000)
+    
+                createParticles({
+                    object: player,
+                    color: 'white',
+                    fades: true
+                })
+            }
 
             projectiles.forEach((projectile, j) => {
                 if (
