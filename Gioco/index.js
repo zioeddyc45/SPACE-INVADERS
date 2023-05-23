@@ -452,6 +452,7 @@ function animate(){
                                 grid.position.x=firstInvader.position.x
                             } else{
                                 grids.splice(gridIndex, 1)
+                                frames = 0;
                             }
                         }
                     }, 0)
@@ -473,10 +474,9 @@ function animate(){
         player.velocity.x=0
         player.rotation=0
     }
-
-    if (frames % randomInterval === 0) {
+    if (frames == 0) {
         grids.push(new Grid())
-        randomInterval=Math.floor(Math.random()*500+500)
+        //randomInterval=Math.floor(Math.random()*500+500)
         frames=0
     }
 
