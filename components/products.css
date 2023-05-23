@@ -1,0 +1,271 @@
+a{
+    color:#ffffff !important;
+}
+
+/*header*/
+.header{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 130px;
+    /*position: absolute;*/
+    display: flex;
+    align-items: center;
+    justify-content: safe;
+}
+
+.nav-link:hover{
+    color: #ffffff;
+}
+
+.dropdown-menu{
+    background-color:#212529;
+}
+
+.logo{
+    margin-left: 70px;
+    width: 130px;
+}
+
+.link li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.link a{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color: yellow !important;
+    font-size: 27px;
+    margin-left: 100px;
+}
+
+.sezione_centrale{
+    height: 100%;
+}
+
+.news{
+    margin-left: 25%;
+    margin-top: 8%;
+}
+
+h3{
+    padding: 0.3em 0 0.4em 60px;
+    color: yellow;
+    border: solid 1px #e4007f;
+    background: url(../images-video/logo_pink.png) no-repeat top left;
+    background-size: contain;
+}
+
+h4{
+    margin: 2em 0 0.5em;
+    padding-left: 50px;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #e4007f;
+    background: url(../images-video/pink_arrow.png) no-repeat left;
+    clear: left;
+}
+
+/*griglia*/
+.grid{
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+    margin-left: 16.5%;
+    margin-right: 16.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 800px;
+    height: 1900px;
+    column-gap: 5%;
+    row-gap: 5%;
+
+
+}
+
+.container_product{
+    
+    background-color: #e4007f;
+    border: 1px solid yellow;
+}
+
+.container_product a{
+    text-decoration: none;
+}
+
+/*sezione centrale*/
+
+
+/*container1*/
+.sopra_1{
+    background-image: url(../images-video/shopping.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_1{
+    height: 50%;
+}
+
+
+/*container2*/
+.sopra_2{
+    background-image: url(../images-video/shopping-_6_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_2{
+    height: 50%;
+}
+
+/*container3*/
+.sopra_3{
+    background-image: url(../images-video/shopping-_2_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_3{
+    height: 50%;
+}
+
+/*container4*/
+.sopra_4{
+    background-image: url(../images-video/shopping-_3_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_4{
+    height: 50%;
+}
+
+/*container5*/
+.sopra_5{
+    background-image: url(../images-video/shopping-_4_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_5{
+    height: 50%;
+}
+
+/*container6*/
+.sopra_6{
+    background-image: url(../images-video/shopping-_5_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_6{
+    height: 50%;
+}
+
+/*container7*/
+.sopra_7{
+    background-image: url(../images-video/shopping-_1_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.sotto_7{
+    height: 50%;
+    
+}
+
+
+
+.acquista{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 5px 5px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    
+}
+
+.acquista a{
+    color: yellow !important;
+}
+
+
+
+
+.prodotto p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  black;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+
+/*footer*/
+.footer{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+
+}
+
+.container{
+    height: 100px;
+    max-width: 1570px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.logosotto{
+    width: 100px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}

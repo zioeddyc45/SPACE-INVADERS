@@ -1,0 +1,238 @@
+
+
+/*home*/
+
+.sezione_centrale{
+    height: 100%;
+}
+
+.news{
+    margin-left: 25%;
+    margin-top: 8%;
+}
+
+h3{
+    padding: 0.3em 0 0.4em 60px;
+    color: yellow;
+    border: solid 1px #e4007f;
+    background: url(../images-video/logo_pink.png) no-repeat top left;
+    background-size: contain;
+}
+
+h4{
+    margin: 2em 0 0.5em;
+    padding-left: 50px;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #e4007f;
+    background: url(../images-video/pink_arrow.png) no-repeat left;
+    clear: left;
+}
+
+/*griglia*/
+.grid{
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+    margin-left: 16.5%;
+    margin-right: 16.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 930px;
+    height: 1300px;
+    column-gap: 5%;
+    row-gap: 5%;
+
+
+
+}
+
+.container_news{
+    
+    background-color: #e4007f;
+    border: 1px solid yellow;
+}
+
+.container_news a{
+    text-decoration: none;
+}
+
+/*container1*/
+.sopra_1{
+    background-image: url(../images-video/news_container_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.data_container_1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.sotto_1{
+    height: 50%;
+}
+
+.info_1 p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  black;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+/*container2*/
+.sopra_2{
+    background-image: url(../images-video/news_container_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.data_container_2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.sotto_2{
+    height: 50%;
+}
+
+.info_2 p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  black;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+/*container3*/
+.sopra_3{
+    background-image: url(../images-video/news_container_3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.data_container_3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.sotto_3{
+    height: 50%;
+}
+
+.info_3 p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  black;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+/*container4*/
+.sopra_4{
+    background-image: url(../images-video/news_container_4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.data_container_4{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.sotto_4{
+    height: 50%;
+}
+
+.info_4 p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  black;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+/*container5*/
+.sopra_5{
+    background-image: url(../images-video/news_container_5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 50%;
+}
+
+.data_container_5{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellow;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.sotto_5{
+    height: 50%;
+}
+
+.info_5 p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:  black;
+    font-size: 27px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/*footer*/
+.footer{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../images-video/constellations-2609647_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+
+}
+
+.container{
+    height: 100px;
+    max-width: 1570px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.logosotto{
+    width: 100px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
