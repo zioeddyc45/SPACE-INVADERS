@@ -20,27 +20,57 @@
 
     <div class="header">
       
-      <nav class="navbar">
-        <img src="images-video/logodef.png" class="logo">
-        <ul class="link">
-          <li><a href="play.html">PLAY</a></li>
-          <li><a href="record.php">RECORD</a></li>
-          <li><a href="products.html">PRODUCTS</a></li>
-          <li><a href="news.html">NEWS</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg bg-dark" >
+        <div class="container-fluid ">
+          <a class="anchor" name="top" style="top: 0px;"></a>
+          <a class="navbar-brand" href="index.html"><img src="images-video/logodef.png" class="logo" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="nmainNav" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 links">
+              <li class="nav-item link"><a class="nav-link " href="record.PHP">RECORD</a> </li>
+              <li class="nav-item link">
+                <a class="nav-link" href="products.html">PRODUCTS</a>
+              </li>
+              <li class="nav-item link">
+                <a class="nav-link " href="news.html">NEWS</a>
+              </li>
+              <li class="nav-item link">
+                <a class="nav-link " href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item link">
+                <a class="nav-link " href="play.html">PLAY</a>
+              </li>
+            </ul>
+         </div>
+        </div>
       </nav>
     </div>
 
       
-    <div class="container-fluid">
+    <div class="container-fluid panel">
+      <a name="game_panel" class="anchor"></a>
         <div class="col-2"></div>
+
         <div class="col-8" style="background-color: cornflowerblue;">
           <div class="align-self-center" style="height: 90%">
             <h1 class="text-center" style="margin: 2em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis volutpat leo, vitae convallis leo mattis eu. Maecenas id efficitur libero. Nulla ornare augue et libero facilisis porttitor quis ut nibh. Etiam risus lacus, congue non lobortis dictum, suscipit eu nulla. Phasellus sed turpis et tortor vulputate hendrerit. In sed porttitor turpis, sit amet vestibulum neque. Sed sit amet diam sit amet augue tincidunt vestibulum. Proin consequat metus sed lectus consectetur venenatis. </h1>
           </div>
         </div>
-        <div class="col-8">
+        
+        
+
+        <div class="col-2 d-flex aligns-items-center" style="height: 100%;">
+          <div class="embed-responsive">
+            <iframe name="test" class="form-frame"></iframe>
+          </div>
+        </div>
+
+    </div>
+    <div class="container-fluid panel">
+    <a name="ist_panel" class="anchor"></a>
+    <div class="col-8">
           <div id="Arcade">
             <h3>ARCADE MODE</h3>
             <h4>Basic rules</h4>
@@ -57,18 +87,8 @@
               <img src="/images-video/tasiera.png">
             </p>
           </div>
-        </div>
-        
-
-        <div class="col-2 d-flex aligns-items-center" style="height: 100%;">
-          <div class="embed-responsive">
-            <iframe name="test" class="form-frame"></iframe>
-          </div>
-        </div>
-
-    </div>*/
-
-     
+      </div>
+     </div>
 
     <div class="footer">
 
@@ -106,6 +126,7 @@
     </div>
   </body>
 
+  <script src="/components/fixScroll.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 

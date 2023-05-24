@@ -21,7 +21,7 @@
             <span class="navbar-toggler-icon"></span> 
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item link"><a class="nav-link " href="record.PHP">RECORD</a> </li>
               <li class="nav-item link">
                 <a class="nav-link" href="products.html">PRODUCTS</a>
@@ -53,7 +53,6 @@
           $query = 'SELECT name, points FROM records ORDER BY "points" desc ';
           pg_send_query($dbconn, $query) or die(' Query failed: ' . pg_lasterror());
           $result = pg_get_result($dbconn);
-          // P r i n t i n g r e s u l t s i n HTML
           echo "<table class='table table-dark table-striped'>\n<thead>
           <tr>
             <th scope='col'>#</th>
