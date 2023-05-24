@@ -1,6 +1,16 @@
 a{
     color:#ffffff !important;
 }
+.panel{
+    height: 100vh;
+}
+.main-roba{
+    height: 90vh;
+}
+.anchor{
+    position: absolute;
+    left: 0px;
+}
 
 /*header*/
 .header{
