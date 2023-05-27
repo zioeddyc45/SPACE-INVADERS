@@ -31,5 +31,5 @@
                 scrollTop: a[i].offsetTop
             });
         }
-    });
+    },);
 })();

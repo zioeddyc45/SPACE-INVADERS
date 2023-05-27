@@ -19,7 +19,7 @@ class Player{
         this.opacity=1
 
         const image=new Image()
-        image.src='./img/spaceship.png'
+        image.src='Gioco/img/spaceship.png'
         image.onload=()=> {
             const scale=0.15
             this.image=image
@@ -151,7 +151,7 @@ class Invader{
         }
 
         const image=new Image()
-        image.src='./img/invader.png'
+        image.src='Gioco/img/invader.png'
         image.onload=() => {
             const scale=1
             this.image=image
@@ -314,7 +314,7 @@ function createParticles({ object, color, fades}){
 
 function animate(){
     if (!game.active) return
-    requestAnimationFrame(animate)
+    //requestAnimationFrame(animate)
     c.fillStyle='black'
     c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
@@ -365,6 +365,7 @@ function animate(){
             })
         }
     })
+
 
     projectiles.forEach((projectile, index) => {
         if (projectile.position.y+projectile.radius<=0){
@@ -482,8 +483,19 @@ function animate(){
 
     frames++
 }
-$( document ).ready(
-    animate()
+var isPaused= false;
+function Start() {
+    if($("#gameDiv").is(":hidden")){
+       isPaused = true;
+      }
+    if (!isPaused) {
+        animate();
+    }
+
+    requestAnimationFrame(Start);
+}
+$( document).ready(
+    Start()
 );
 
 //controllo giocatore con tasti5
@@ -501,7 +513,7 @@ addEventListener('keydown', ({key}) => {
             //console.log('right')
             keys.d.pressed=true
             break
-        case ' ':
+        case 'w':
             //delay per dare ritmo naturale ai proiettili
             if (delay)
             return;
@@ -534,7 +546,7 @@ addEventListener('keyup', ({key}) => {
         case 'd':
             keys.d.pressed=false
             break
-        case ' ':
+        case 'w':
             break
     }
 })
