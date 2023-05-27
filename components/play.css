@@ -130,5 +130,24 @@ ul{
     padding: 0 15px;
 }
 
+.start-btn{
+    --bs-btn-color: #000;
+    --bs-btn-bg: #ffe342; 
+    --bs-btn-font-size: 4.5rem;
+
+}
+
+.pause {
+    width: 3rem;
+    height: 3rem;
+    border-style: solid;
+    border-width: 1.5rem;
+    border-color: #fff;
+    border-width: 0rem 1.5rem 0rem 1.5rem;
+    background-color: transparent;
+    margin-top: 1em;
+    left: 90% !important;
+  }
+
 
 

@@ -56,10 +56,12 @@
         <div id = "gameDiv" class="col-8 d-flex align-items-center d-none d-xl-block d-xxl-block" style="height: 100%">
           <div class="align-self-center" style="height: 90%">
             <div style="position: relative; height: 90%;">
-              <p 
+              <button type="button" class="btn btn-dark btn-lg position-absolute top-50 start-50 translate-middle-x start-btn" onclick="this.style.display='none';enableGView(); Start();">Start</button>
+              <button id="pause" type="button" class="pause position-absolute top-0 start-100 translate-middle-x" style="display: none;" onclick="isPaused=!isPaused"></button>
+              <p id="score"
               style="position: absolute; z-index: 10; color: white;
               left: 10px; top: 10px; margin: 0; font-family: sans-serif;
-              font-size: 14px;"
+              font-size: 14px; display: none;"
               >
                   <span>Score:</span> <span id="scoreEl">0</span>
               </p>
@@ -146,15 +148,10 @@
   <script src="/components/postJS.js"></script>
   <script src="Gioco/index.js"></script>
   <script>
-    function Test(){
-    if($("#gamediv").is(":hidden")){
-        return true;
+    function enableGView(){
+      $("#score").css("display", "block");
+      $("#pause").css("display", "block");
     }
-    else{
-        return false;
-    }
-}
-
   </script>
 
 </html>

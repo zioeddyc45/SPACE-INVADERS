@@ -356,7 +356,7 @@ function animate(){
             setTimeout(() => {
                 game.active=false;
                 post("form.html", score);
-            }, 2000)
+            }, 500)
 
             createParticles({
                 object: player,
@@ -494,9 +494,9 @@ function Start() {
 
     requestAnimationFrame(Start);
 }
-$( document).ready(
-    Start()
-);
+//$( document).ready(
+//    Start()
+//);
 
 //controllo giocatore con tasti5
 
