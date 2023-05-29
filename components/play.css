@@ -149,5 +149,8 @@ ul{
     left: 90% !important;
   }
 
-
+.Controls p img{
+    max-width: 100%;
+    margin-bottom: 50px;
+}
 

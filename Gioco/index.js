@@ -355,6 +355,15 @@ function animate(){
 
             setTimeout(() => {
                 game.active=false;
+                c.font = "40px Arial";
+                c.fillStyle = 'white';
+                c.textAlign = "center";     
+                c.fillText("Game Over",800, canvas.height/2);
+                c.fillText("You can store the record on the right",800, (canvas.height/2)+40);
+                c.fillText("or just reload the page and play another game",800, (canvas.height/2)+80);
+                localStorage.setItem("index", (Number(localStorage.getItem("index"))+1));
+                localStorage.setItem(localStorage.getItem("index"), score);
+                loadLocalRecord();
                 post("form.html", score);
             }, 500)
 
@@ -400,6 +409,12 @@ function animate(){
     
                 setTimeout(() => {
                     game.active=false;
+                    c.font = "40px Arial";
+                    c.fillStyle = 'white';
+                    c.textAlign = "center";     
+                    c.fillText("Game Over",800, canvas.height/2);
+                    c.fillText("You can store the record on the right",800, (canvas.height/2)+40);
+                    c.fillText("or just reload the page and play another game",800, (canvas.height/2)+80);
                     post("form.html", score);
                 }, 2000)
     
@@ -490,6 +505,12 @@ function Start() {
       }
     if (!isPaused) {
         animate();
+    }else{
+        c.font = "40px Arial";
+        c.fillStyle = 'white';
+        c.textAlign = "center";
+        c.fillText("Game paused",800, (canvas.height/2));
+        c.fillText("press the button on the top right corner to resume",800, (canvas.height/2)+40);
     }
 
     requestAnimationFrame(Start);

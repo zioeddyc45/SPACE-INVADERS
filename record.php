@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Records - Space invaders</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -13,7 +14,8 @@
 </head>
   <body>
 <div class="space"></div>
-    <nav class="navbar navbar-expand-lg bg-dark" >
+<div class="header">
+<nav class="navbar navbar-expand-lg" >
         <div class="container-fluid ">
           <a class="anchor" name="top" style="top: 0px;"></a>
           <a class="navbar-brand" href="index.html"><img src="images-video/logodef.png" class="logo" ></a>
@@ -21,8 +23,13 @@
             <span class="navbar-toggler-icon"></span> 
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item link"><a class="nav-link " href="record.PHP">RECORD</a> </li>
+            <ul class="navbar-nav mb-2 mb-lg-0 links">
+              <li class="nav-item link">
+                <a class="nav-link " href="play.html">PLAY</a>
+              </li>
+              <li class="nav-item link">
+                <a class="nav-link " href="record.php">RECORD</a> 
+              </li>
               <li class="nav-item link">
                 <a class="nav-link" href="products.html">PRODUCTS</a>
               </li>
@@ -32,19 +39,18 @@
               <li class="nav-item link">
                 <a class="nav-link " href="about.html">ABOUT</a>
               </li>
-              <li class="nav-item link">
-                <a class="nav-link " href="play.html">PLAY</a>
-              </li>
+             
             </ul>
          </div>
         </div>
       </nav>
+</div>
 
     <div class="container-fluid main-roba">
       <a name="game_panel" class="anchor"></a>
       <div class="container-fluid row" style="height: 100%;">
-      <div class="col-2" style="height: 100%;"></div>
-      <div class="col-8">
+      <div class="col-2 d-none d-xl-block d-xxl-block" style="height: 100%;"></div>
+      <div class="col-12 col-xl-8">
         <div class="align-self-center" style="height: 90%">
 
           <?php
@@ -90,7 +96,7 @@
 
         </div>
       </div>
-      <div class="col-2" style="height: 100%;"></div>
+      <div class="col-2 d-none d-xl-block d-xxl-block" style="height: 100%;"></div>
       </div>
     </div>
    

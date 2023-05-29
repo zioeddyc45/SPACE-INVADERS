@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/components/main.css" />
     <link rel="stylesheet" href="/components/play.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -20,7 +21,7 @@
 
     <div class="header">
       
-      <nav class="navbar navbar-expand-lg bg-dark" >
+      <nav class="navbar navbar-expand-lg" >
         <div class="container-fluid ">
           <a class="anchor" name="top" style="top: 0px;"></a>
           <a class="navbar-brand" href="index.html"><img src="images-video/logodef.png" class="logo" ></a>
@@ -29,7 +30,12 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="mainNav">
             <ul class="navbar-nav mb-2 mb-lg-0 links">
-              <li class="nav-item link"><a class="nav-link " href="record.PHP">RECORD</a> </li>
+              <li class="nav-item link">
+                <a class="nav-link " href="play.html">PLAY</a>
+              </li>
+              <li class="nav-item link">
+                <a class="nav-link " href="record.php">RECORD</a> 
+              </li>
               <li class="nav-item link">
                 <a class="nav-link" href="products.html">PRODUCTS</a>
               </li>
@@ -39,9 +45,7 @@
               <li class="nav-item link">
                 <a class="nav-link " href="about.html">ABOUT</a>
               </li>
-              <li class="nav-item link">
-                <a class="nav-link " href="play.html">PLAY</a>
-              </li>
+             
             </ul>
          </div>
         </div>
@@ -51,7 +55,20 @@
       
     <div class="container-fluid panel row">
       <a name="game_panel" class="anchor"></a>
-        <div class="col-2 d-none d-xl-block d-xxl-block"></div>
+        <div class="col-2 d-none d-xl-block d-xxl-block">
+          <p class="h3" style="color: white;">Local Records</p>
+          <table class='table table-dark table-striped'>
+            <thead>
+              <tr>
+                <th scope='col'>Points</th>
+              </tr>
+            </thead>
+            <tbody>
+          
+            </tbody>
+          </table>
+          <button type="submit" class="btn btn-primary" onclick="localStorage.clear()">Reset local</button>
+        </div>
 
         <div id = "gameDiv" class="col-8 d-flex align-items-center d-none d-xl-block d-xxl-block" style="height: 100%">
           <div class="align-self-center" style="height: 90%">
@@ -70,9 +87,10 @@
           </div>
         </div>
 
-        <div class="col-12 d-flex align-items-center d-xl-none" style="height: 100%; background-color: darkslategrey;">
-          <div class="align-self-center" style="height: 90%">
-            
+        <div class="col-12 d-flex align-items-center d-xl-none" style="height: 100%;">
+          <div class=" position: relative;align-self-center" style="height: 90%">
+            <div class="position-absolute top-50 start-50 translate-middle-x" style="background: firebrick; border-radius: 1rem;text-align: center;">
+            <a  class="h1"  style="text-decoration: none; ">Sorry for the inconvenience <br/> this window dimension is not supported<br/> try to enlarge it or change device</a></div>
           </div>
         </div>
 
@@ -152,6 +170,32 @@
       $("#score").css("display", "block");
       $("#pause").css("display", "block");
     }
+  </script>
+  <script>
+
+    function loadLocalRecord(){
+      var points  = [];
+      if(localStorage.getItem("index")==null){
+        localStorage.setItem("index",0);
+      }
+      else{
+        i = localStorage.getItem("index");
+      }
+      while(localStorage.getItem(i)!= null){
+        points.push(localStorage.getItem(i));
+        
+        i--;
+      }
+      //points.sort(function(a, b){return b-a});
+      var tbl = "";
+      tbl+="<tr><td class='h3'><span class='fa fa-star checked'></span> "+Math.max(...points)+"</td></tr>";
+      points.forEach(p => {
+        tbl+= "<tr><td>" + p + "</td></tr>";
+      })
+      
+      $("tbody").html(tbl);}
+
+    $(document).ready(loadLocalRecord());
   </script>
 
 </html>
