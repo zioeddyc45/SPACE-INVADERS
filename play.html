@@ -67,7 +67,7 @@
           
             </tbody>
           </table>
-          <button type="submit" class="btn btn-primary" onclick="localStorage.clear()">Reset local</button>
+          <button type="submit" class="btn btn-primary" onclick="localStorage.clear(); loadLocalRecord();">Reset local</button>
         </div>
 
         <div id = "gameDiv" class="col-8 d-flex align-items-center d-none d-xl-block d-xxl-block" style="height: 100%">
@@ -178,20 +178,24 @@
       if(localStorage.getItem("index")==null){
         localStorage.setItem("index",0);
       }
-      else{
+      
         i = localStorage.getItem("index");
-      }
-      while(localStorage.getItem(i)!= null){
+        var tbl = "";
+      if( i != 0){
+        while(localStorage.getItem(i)!= null){
         points.push(localStorage.getItem(i));
         
         i--;
       }
       //points.sort(function(a, b){return b-a});
-      var tbl = "";
+      
+      
       tbl+="<tr><td class='h3'><span class='fa fa-star checked'></span> "+Math.max(...points)+"</td></tr>";
       points.forEach(p => {
         tbl+= "<tr><td>" + p + "</td></tr>";
       })
+      }
+      
       
       $("tbody").html(tbl);}
 

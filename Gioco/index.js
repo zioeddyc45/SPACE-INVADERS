@@ -415,8 +415,11 @@ function animate(){
                     c.fillText("Game Over",800, canvas.height/2);
                     c.fillText("You can store the record on the right",800, (canvas.height/2)+40);
                     c.fillText("or just reload the page and play another game",800, (canvas.height/2)+80);
+                    localStorage.setItem("index", (Number(localStorage.getItem("index"))+1));
+                    localStorage.setItem(localStorage.getItem("index"), score);
+                    loadLocalRecord();
                     post("form.html", score);
-                }, 2000)
+                }, 500)
     
                 createParticles({
                     object: player,

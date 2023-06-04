@@ -47,7 +47,6 @@
 </div>
 
     <div class="container-fluid main-roba">
-      <a name="game_panel" class="anchor"></a>
       <div class="container-fluid row" style="height: 100%;">
       <div class="col-2 d-none d-xl-block d-xxl-block" style="height: 100%;"></div>
       <div class="col-12 col-xl-8">
